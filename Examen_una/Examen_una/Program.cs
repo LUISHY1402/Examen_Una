@@ -1,4 +1,12 @@
+
+using Examen_una.Data.Repository;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+var connectionStrings = builder.Configuration.GetConnectionString("examunan");
+builder.Services.AddDbContext<DataContext>(options =>
+options.UseSqlServer(connectionStrings));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

@@ -14,6 +14,6 @@ namespace Examen_una.Data.Repository
 
         public DbSet<Plantas> plantas { get; set; }
         public DbSet<Riego> riegos { get; set; }
-        
+
     }
 }
